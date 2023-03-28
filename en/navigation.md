@@ -20,16 +20,15 @@
 
 * [ScRNAseq basics](scRNAseq.md)
 * [scVI basics](scvi.md)
-* [ScTCRab-seq basics](scTCRseq.md)
 * [Genotype demultiplexing](genotype_demultiplex.md)
 * [Mitochondrial variants](genotype_demultiplex.md)
 
-[How to analyze scRNAseq]()
+[How to analyze TCR-seq]()
 
 * [TCRb-seq basics](tcrseq_basics.md)
+* [ScTCRab-seq basics](scTCRseq.md)
 * [GLIPH2](gliph2.md)
 * [TCRGP](tcrgp.md)
-
 
 [How to contribute](contribute.md)
 
