@@ -1,8 +1,8 @@
-## scRNAseq analysis
+## scVI analysis
 
 28th March 2023; added by Jani Huuhtanen (jani.huuhtanen@helsinki.fi)
 
-### scVI intro
+## scVI intro
 
 scVI is a Bayesian swiss knife for doing single-cell analysis. In general, I mostly use scVI to gain a _latent_ _representation_ of the scRNAseq count matrices, where different nuisance factors (i.e., batch) can be considered. Essentially the latent is then used in a "basic" Seurat workflow instead of the PC:s, i.e. I count the UMAP from latents and clustering from latents.
 
@@ -21,7 +21,7 @@ For (computational) biologists, the best article is probrably [this one](https:/
 
 After this assignment, you are ready to move on 
 
-### scVI pragmatically 
+## scVI pragmatically 
 
 The way I use scVI, is in Aalto Universitys Triton supercomputing platform, but also for smaller data sets (tested at ~200 000 cells) local computation is also feasible. There are options for Python (optimal) and for R (suboptimal, but workable), with GPU as well. 
 
@@ -33,7 +33,7 @@ Prgmatically, I use scVI as follows:
 4) Do UMAP from the latents, 
 5) Do clustering from the latents
 
-### 1) from Seurat to scVI:
+## 1) from Seurat to scVI:
 
 ```{python}
 seuratToScvi <- function(seurat_object, file = "results/seurat_object.h5Seurat"){
@@ -53,7 +53,7 @@ blastpre_seurat %>% seuratToScvi(file = "results/blastpre_seurat.h5Seurat")
 
 ```
 
-### 2) calculate latents with scVI, where each sample is a batch
+## 2) calculate latents with scVI, where each sample is a batch
 
 Note that this is done in Python in the Aalto cluster Triton; setting up the scVI is a different topic
 
@@ -79,7 +79,7 @@ latent = seurat_data_model.get_latent_representation()
 np.savetxt("results/scvi/output/hemap_blast_pre_latent.csv", latent, delimiter=",")
 ```
 
-3) put the latents to Seurat-object
+## 3) put the latents to Seurat-object
 
 This is back in R.
 
@@ -108,10 +108,9 @@ blastpre_seurat <- blastpre_seurat %>% putLatentsSeurat(latents)
 ```
 
 
-4) Get latent UMAP
+## 4) Get latent UMAP
 
 ```{R}
-
 getLatentUMAP <- function(seurat_object){
 
   umap_df           <- seurat_object[["latent"]]@cell.embeddings %>% uwot::umap()
