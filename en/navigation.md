@@ -20,6 +20,8 @@
 * [ScRNAseq basics](scRNAseq.md)
 * [scVI basics](scvi.md)
 * [ScTCRab-seq basics](scTCRseq.md)
+* [Genotype demultiplexing](genotype_demultiplex.md)
+* [Mitochondrial variants](genotype_demultiplex.md)
 
 [How to contribute](contribute.md)
 
