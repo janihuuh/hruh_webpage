@@ -11,9 +11,14 @@
 * [HRUH_clusters and installing packages](HRUH_clusters.md)
 * [Directory map and useful links](directory_map.md)
 
-[How to git](git.md)
+[General info]()
 
-[How to TCGA](TCGA_data.md)
+* [How to TCGA](TCGA_data.md)
+* [How to git](git.md)
+
+[How to analyze scRNAseq]()
+* [ScRNAseq basics](scRNAseq.md)
+* [ScTCRab-seq basics](scTCRseq.md)
 
 [How to contribute](contribute.md)
 
