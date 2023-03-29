@@ -18,7 +18,7 @@
 
 [How to analyze scRNAseq]()
 
-* [ScRNAseq basics](scRNAseq.md)
+* [scRNAseq basics](scRNAseq.md)
 * [scVI basics](scvi.md)
 * [Genotype demultiplexing](genotype_demultiplex.md)
 * [Mitochondrial variants](genotype_demultiplex.md)
