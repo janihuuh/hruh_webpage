@@ -190,7 +190,17 @@ The long term goal is to move away from the queues and instead only use resource
 This also ties into being able to run singularity containers in the cluster.
 Pure docker containers due to its security limitations are not currently planned.
 ```
+Some "hidden" nodes:
 
+```
+If you need even more memory (up to 256G), use –q seq_hugemem2.q
+Working interactively in a node
+
+If you want to work interactively without using the job queue, you can enter a node and work there without disturbing others in the main node.
+ssh nameofnode
+e.g. ssh compute-16
+
+```
 
 #### 10. More information and commands for qsub
 More information and commands for qsub can be found in http://bioinformatics.mdc-berlin.de/intro2UnixandSGE/sun_grid_engine_for_beginners/how_to_submit_a_job_using_qsub.html.
