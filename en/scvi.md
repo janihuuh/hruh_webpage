@@ -35,7 +35,7 @@ Prgmatically, I use scVI as follows:
 
 ## 1) from Seurat to scVI:
 
-```{python}
+```R
 seuratToScvi <- function(seurat_object, file = "results/seurat_object.h5Seurat"){
   
   idents.to.keep <- seurat_object@meta.data %>% group_by(orig.ident) %>% summarise(n=n()) %>% filter(n>3) %>% pull(orig.ident)
@@ -57,7 +57,7 @@ blastpre_seurat %>% seuratToScvi(file = "results/blastpre_seurat.h5Seurat")
 
 Note that this is done in Python in the Aalto cluster Triton; setting up the scVI is a different topic
 
-```{python}
+```python
 import scvi; import scanpy as sc; import os; import numpy as np
 os.chdir("/scratch/cs/csb/projects/bclxl/")
 
@@ -83,7 +83,7 @@ np.savetxt("results/scvi/output/hemap_blast_pre_latent.csv", latent, delimiter="
 
 This is back in R.
 
-```{R}
+```R
 putLatentsSeurat <- function(seurat_object, latent){
 
   latent_umap <- uwot::umap(latent) %>% as.data.frame() %>% dplyr::rename(UMAP1=V1, UMAP2=V2)
@@ -110,7 +110,7 @@ blastpre_seurat <- blastpre_seurat %>% putLatentsSeurat(latents)
 
 ## 4) Get latent UMAP
 
-```{R}
+```R
 getLatentUMAP <- function(seurat_object){
 
   umap_df           <- seurat_object[["latent"]]@cell.embeddings %>% uwot::umap()
@@ -130,9 +130,9 @@ blastpre_seurat <- blastpre_seurat %>% getLatentUMAP()
 
 
 
-5) Get latent clustering
+## 5) Get latent clustering
 
-```{R}
+```R
 getLatentClustering <- function(seurat_object){
 
   ## Clustering
