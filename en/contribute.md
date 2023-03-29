@@ -27,6 +27,12 @@ The file should be updated it automagically after the file is in the folder, for
 
 [gimmick:ForkMeOnGitHub](https://github.com/janihuuh/hruh_webpage)
 
+## What to contribute?
+
+On 28th of March 2023, we had a meeting related to the webpage. Here are the meeting notes:
+
+https://docs.google.com/document/d/1L9QWNBBinlsbMlN419eKgME6O8p4snmABb4CTwOjZBU/edit
+
 ## Contact
 
 jani.huuhtanen@helsinki.fi 
