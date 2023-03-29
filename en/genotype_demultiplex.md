@@ -11,8 +11,7 @@ The workflow consits of three parts,
 This is highly based on the [vireo-workflow](https://vireosnp.readthedocs.io/en/latest/) and the [MQuad-workflow](https://github.com/single-cell-genetics/MQuad) 
 
 
-```
-{
+``` bash
 #!/bin/bash
 export PATH=$PATH:/csc/mustjoki/anaconda3/bin/
 source /csc/mustjoki/anaconda3/bin/activate cellsnplite_test
@@ -40,5 +39,4 @@ n_donor=4
 mkdir $OUT_DIR
 vireo -c $INPUT_DIR -N $n_donor -o $OUT_DIR
 
-}
 ```
