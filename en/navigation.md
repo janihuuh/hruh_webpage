@@ -26,7 +26,7 @@
 [How to analyze TCR-seq]()
 
 * [TCRb-seq basics](tcrseq_basics.md)
-* [ScTCRab-seq basics](scTCRseq.md)
+* [ScTCRab-seq basics](sctcrseq.md)
 * [GLIPH2](gliph.md)
 * [TCRGP](tcrgp.md)
 
