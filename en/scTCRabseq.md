@@ -1,6 +1,11 @@
 # scTCRab-seq
 
+29th March 2023; added by Jani Huuhtanen (jani.huuhtanen@helsinki.fi)
+
+## scRepertoire
 Please follow the [scRepertoire](https://github.com/ncborcherding/scRepertoire) workflow. You should try to put your scTCRseq data as soon as possible to your scRNAseq data, in order to analyze the QC, cell types etc with more confidence. 
+
+## Ideas
 
 What you can do with scTCRab-seq:
 
