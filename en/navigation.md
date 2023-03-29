@@ -27,7 +27,7 @@
 
 * [TCRb-seq basics](tcrseq_basics.md)
 * [ScTCRab-seq basics](scTCRseq.md)
-* [GLIPH2](gliph2.md)
+* [GLIPH2](gliph.md)
 * [TCRGP](tcrgp.md)
 
 [How to contribute](contribute.md)
