@@ -15,6 +15,7 @@
 
 * [How to TCGA](TCGA_data.md)
 * [How to git](git.md)
+* [How to submit data](submit_data.md)
 
 [How to analyze scRNAseq]()
 
