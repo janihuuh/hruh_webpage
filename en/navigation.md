@@ -23,6 +23,7 @@
 * [scVI basics](scvi.md)
 * [Genotype demultiplexing](genotype_demultiplex.md)
 * [Mitochondrial variants](genotype_demultiplex.md)
+* [Velocyto](velocyto.md)
 
 [How to analyze TCR-seq]()
 
