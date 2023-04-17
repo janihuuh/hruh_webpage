@@ -34,7 +34,10 @@ export PYTHONPATH=/fs/vault/pipelines/t_receptor/bin/sc-ko-screen-shendure/inclu
 ⁃	Run the bash scripts in the queue
 
 
+
+
 # 2.	Analysis in R
+
 
 ## Create object
 
@@ -62,6 +65,7 @@ The resulting object should have only good quality cells expressing a single sgR
 
 
 
+
 ## Run differential expression analyses
 
 Script example to perform differential expression analysis using the Seurat object generated above:
@@ -79,6 +83,8 @@ Briefly, what the script does is the following:
   ⁃	Compute DEG and plot volcano plots between treatments using cells with control sgRNAs from each condition
   
   ⁃	Calculate enrichment/depletion of cells carrying different sgRNA between treatment conditions (using different sgRNAs as biological replicates)
+
+
 
 
 ## Run mixscape analyses (Papalexi et al. Nature Genetics 2021)
