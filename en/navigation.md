@@ -26,6 +26,7 @@
 * [Mitochondrial variants](genotype_demultiplex.md)
 * [Velocyto](velocyto.md)
 * [scvelo](run_scvelo_cropseq_2023.html)
+* [CROP-seq](cropseq.md)
 
 [How to analyze TCR-seq]()
 
