@@ -36,7 +36,7 @@ conda deactivate
 Put your secret key file into the directory you created for the data in /csc/mustjoki (nkheme in the example). Go to the directory where your file is and run the following:
 
 ```bash
-source /csc/mustjoki/anaconda3/bin/activate odcondaenv
+source /csc/mustjoki/anaconda3/bin/activate mycondaenv
 crypt4gh decrypt --sk /csc/mustjoki2/nkheme/nkheme_crypt4gh.key < filename.tar.gz.c4gh > filename.tar.gz
 ```
 
