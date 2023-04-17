@@ -1,9 +1,9 @@
 Added April 17 2023 by Olli
 
 
-## CROP-seq analysis
+# CROP-seq analysis
 
-## 1.	Get sgRNA barcode UMI/read counts
+# 1.	Get sgRNA barcode UMI/read counts
 FASTQ files of the targeted sgRNA amplification libraries are run through Cell Ranger count pipeline by the core
 
 Extract UMI counts of guides associated with each cell using the get_barcodes.py script (https://github.com/shendurelab/single-cell-ko-screens, Hill et al., 2018).
@@ -34,9 +34,9 @@ export PYTHONPATH=/fs/vault/pipelines/t_receptor/bin/sc-ko-screen-shendure/inclu
 ⁃	Run the bash scripts in the queue
 
 
-## 2.	Analysis in R
+# 2.	Analysis in R
 
-# Create object
+## Create object
 
 Move features, barcodes, matrix files from the “outs” directory and the barcode counting output (“experimentname_cropseq_cr.txt”) to your computer
 
@@ -62,7 +62,7 @@ The resulting object should have only good quality cells expressing a single sgR
 
 
 
-# Run differential expression analyses
+## Run differential expression analyses
 
 Script example to perform differential expression analysis using the Seurat object generated above:
 
@@ -81,7 +81,7 @@ Briefly, what the script does is the following:
   ⁃	Calculate enrichment/depletion of cells carrying different sgRNA between treatment conditions (using different sgRNAs as biological replicates)
 
 
-# Run mixscape analyses (Papalexi et al. Nature Genetics 2021)
+## Run mixscape analyses (Papalexi et al. Nature Genetics 2021)
 
 Script example to perform differential expression analysis using the Seurat object:
 
