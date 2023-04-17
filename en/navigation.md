@@ -38,6 +38,7 @@
 [Miscellaneous]()
 
 * [Color scales](color_scales.md)
+* [MAGeCK (CRISPR screen analysis)](mageck.md)
 
 [How to contribute](contribute.md)
 
