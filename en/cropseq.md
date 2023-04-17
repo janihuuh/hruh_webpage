@@ -64,7 +64,7 @@ The resulting object should have only good quality cells expressing a single sgR
 
 Run differential expression analyses
 
-⁃	Script example to perform differential expression analysis using the Seurat object generated above:
+Script example to perform differential expression analysis using the Seurat object generated above:
 
 ```bash
 /csc/mustjoki2/scrna_seq/sc-ko-screen/r_script_examples/run_analyse_SUDHL4_singlet.R 
