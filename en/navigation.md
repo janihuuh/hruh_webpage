@@ -34,7 +34,7 @@
 * [GLIPH2](gliph.md)
 * [TCRGP](tcrgp.md)
 
-[Miscellaneous]
+[Miscellaneous]()
 
 * [Color scales](color_scales.md)
 
