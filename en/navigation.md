@@ -39,6 +39,7 @@
 
 * [Color scales](color_scales.md)
 * [MAGeCK (CRISPR screen analysis)](mageck.md)
+* [CSC bucket download](csc_bucket.md)
 
 [How to contribute](contribute.md)
 
