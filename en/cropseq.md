@@ -36,8 +36,10 @@ export PYTHONPATH=/fs/vault/pipelines/t_receptor/bin/sc-ko-screen-shendure/inclu
 
 Create object
 
-⁃	Move features, barcodes, matrix files from the “outs” directory and the barcode counting output (“experimentname_cropseq_cr.txt”) to your computer
-⁃	Script example to generate Seurat object with sgRNA-cell pairing in /csc/mustjoki2/scrna_seq/sc-ko-screen/r_script_examples/run_makeObjectSUDHL4_singlet.R
+Move features, barcodes, matrix files from the “outs” directory and the barcode counting output (“experimentname_cropseq_cr.txt”) to your computer
+
+Script example to generate Seurat object with sgRNA-cell pairing in /csc/mustjoki2/scrna_seq/sc-ko-screen/r_script_examples/run_makeObjectSUDHL4_singlet.R
+
 ⁃	Briefly, what the script does is the following:
 ⁃	Merge data from different samples (10x lanes) e.g. treated and untreated conditions (this may be useful to be able to compare treatments)
 ⁃	Basic scRNA-seq QC (check that thresholds for QC parameters look good for your data and adjust as needed)
