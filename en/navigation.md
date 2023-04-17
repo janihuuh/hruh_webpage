@@ -34,6 +34,10 @@
 * [GLIPH2](gliph.md)
 * [TCRGP](tcrgp.md)
 
+[Miscellaneous]
+
+* [Color scales](color_scales.md)
+
 [How to contribute](contribute.md)
 
 [gimmick:theme](bootstrap)
