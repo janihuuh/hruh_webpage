@@ -9,7 +9,6 @@
 * [Installing R-packages](rpackages.md)
 * [Run R in atlas](run_r_in_atlas.md)
 * [Installing Python-packages with conda](conda.md)
-* [HRUH_clusters and installing packages](HRUH_clusters.md)
 * [Directory map and useful links](directory_map.md)
 
 [General info]()
@@ -17,6 +16,7 @@
 * [How to TCGA](TCGA_data.md)
 * [How to git](git.md)
 * [How to submit data to publish](submit_data.md)
+* [How to install packages](HRUH_clusters.md)
 
 [How to analyze scRNAseq]()
 
