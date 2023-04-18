@@ -11,13 +11,6 @@
 * [Installing Python-packages with conda](conda.md)
 * [Directory map and useful links](directory_map.md)
 
-[General info]()
-
-* [How to TCGA](TCGA_data.md)
-* [How to git](git.md)
-* [How to submit data to publish](submit_data.md)
-* [How to install packages](HRUH_clusters.md)
-
 [How to analyze scRNAseq]()
 
 * [scRNAseq basics](scRNAseq.md)
@@ -40,6 +33,10 @@
 * [Color scales](color_scales.md)
 * [MAGeCK (CRISPR screen analysis)](mageck.md)
 * [CSC bucket download](csc_bucket.md)
+* [How to TCGA](TCGA_data.md)
+* [How to git](git.md)
+* [How to submit data to publish](submit_data.md)
+* [How to install packages](HRUH_clusters.md)
 
 [How to contribute](contribute.md)
 
