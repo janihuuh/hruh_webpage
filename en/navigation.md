@@ -16,6 +16,7 @@
 * [scRNAseq basics](scRNAseq.md)
 * [scVI basics](scvi.md)
 * [Genotype demultiplexing](genotype_demultiplex.md)
+* [HTO demultiplexing](hto_demultiplexing.md)
 * [Mitochondrial variants](genotype_demultiplex.md)
 * [Velocyto](velocyto.md)
 * [scvelo](run_scvelo_cropseq_2023.html)
