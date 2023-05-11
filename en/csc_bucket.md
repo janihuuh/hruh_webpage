@@ -10,6 +10,7 @@ First create a directory for your data in /csc/mustjoki or /csc/mustjoki2 and ru
 
 ```bash
 screen -S some_name_for_your_screen
+wget https://raw.githubusercontent.com/CSCfi/allas-cli-utils/master/allas_conf
 source allas_conf -u dufvaoll -p project_2007414
 rclone copy allas:nkheme_data_import_1 nkheme_data_import_1
 
