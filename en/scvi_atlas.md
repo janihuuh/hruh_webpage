@@ -2,11 +2,10 @@
 
 Added 3 August 2023 by Aino Häkkinen (aino-elina.hakkinen@helsinki.fi)
 
-Refer to scVI intro by Jani for scVI overview. This is the workflow I've used for running scVI in Atlas, which is somewhat faster than running it locally. Heavily copied from Jason Theodoropoulos. 
+Refer to [scVI intro](scvi.md) by Jani for scVI overview. This is the workflow I've used for running scVI in Atlas, which is somewhat faster than running it locally. Heavily copied from Jason Theodoropoulos. 
 
 ### Set up conda environment 
 Clone Jason's conda environment with scvi
-
 ```python
 conda create --clone /csc/mustjoki/anaconda3/envs/scvi --name my-scvi
 ```
@@ -44,13 +43,12 @@ Convert("my_data.h5seurat", "my_data.h5ad", assay="RNA", overwrite = TRUE)
 ```
 
 ### Upload h5ad file to cluster
-
 ```
 scp /path/to/my_data.h5ad username@atlas.genome.helsinki.fi:/projects/fimm_ngs_mustjoki/path/to/scvi/input/
 ```
 
 ### In cluster, start a screen session
-Always use a screen to make sure you don't lose work if connection is lost; read more on screens in Atlas basics. 
+Always use a screen to make sure you don't lose work if connection is lost; read more on screens in [Atlas basics](atlas.md)
 ```
 screen -S scvi
 ```
