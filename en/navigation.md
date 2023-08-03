@@ -38,7 +38,7 @@
 * [CSC bucket download](csc_bucket.md)
 * [How to TCGA](TCGA_data.md)
 * [How to git](git.md)
-* [how to submit scRNAseq data to publish](publish_seq_data.md)
+* [How to submit scRNAseq data to publish](publish_seq_data.md)
 * [How to submit other data to publish](submit_data.md)
 * [How to install packages](HRUH_clusters.md)
 
