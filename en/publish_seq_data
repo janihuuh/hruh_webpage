@@ -27,10 +27,10 @@ One good option is to publish the raw data in European Genome Archive (EGA), whe
 3.	Create metadata files
     1. To add md5 checksums to metadata table and get all filenames and paths, first make a copy of the checksum files
         *```cp --parents -R ./\*/\*.md5 ./md5```
-    2.  Move the “md5” folder to your computer and use attached R script “scrnaseq\_ega\_submission\_metadata.R”, to create metadata table from the filenames
+    2.  Move the “md5” folder to your computer and use attached [R script](scrnaseq_ega_submission_metadata_3_and_5_.R), to create metadata table from the filenames
         * !!! Please do not edit the shared r script but make a copy of it to your computer which you can edit as much as you want!
         * See How to atlas instructions fro moving files (scp -r command)
-        * 5'VDJ data -> use scrnaseq\_ega\_submission\_metadata\_5\_and\_VDJ.R
+        * 5'VDJ data -> use [scrnaseq_ega_submission_metadata_5_and_VDJ.R](scrnaseq_ega_submission_metadata_5_and_VDJ.R)
         * Files that you need to run the script:
             * Sample template filled with your sample meta information (example: ega\_aa\_scrna\_samples.csv, template can also be found on ega webpage)
          * (Optional: manuscript\_sample\_IDs.csv)
