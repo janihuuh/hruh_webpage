@@ -73,4 +73,8 @@ One good option is to publish the raw data in European Genome Archive (EGA), whe
 
 An example of data access policy:
 
- 
+ |        |           | 
+| ---------- |---------------------------------| 
+| Select a DAC      | Hematology Research Unit Helsinki Data Access Committee | 
+| Short description      | Hematology Research Unit Helsinki Data Access Policy | 
+| Policy | The proposed research use must be consistent with the specific data use limitation for this study. Data requests will be evaluated based on the Helsinki University Hospital ethics committee permit concerning the samples. | 
