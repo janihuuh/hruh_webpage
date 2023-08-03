@@ -1,7 +1,10 @@
+# Submitting and publishing scRNAseq data
+
+Added Sofie Lundgren / August 3rd 2023
 
 ## What should be published and where? Who should have access to the data?
 
-For every sample, there is raw data (.fastq-files) and processed data (*counts*, *matrix* and *barcodes.tsv* -files for gene expression and *clonotypes.csv*, *consensus\_annotations.csv* and *filtered\_consensus\_annotations.csv* -files for V(D)J expression). Many publishers request that the raw data will be published as well, but it is not ethical to allow unlimited download of the raw genomic sequencing data, as it is sensitive data. However, most researchers are using same pipelines (e.g. CellRanger) for raw data processing, and hence publishing the processed data (which is not sensitive) is the best way to support open science.
+For every sample, there are raw data (.fastq-files) and processed data (*counts*, *matrix* and *barcodes.tsv* -files for gene expression and *clonotypes.csv*, *consensus\_annotations.csv* and *filtered\_consensus\_annotations.csv* -files for V(D)J expression). Many publishers request that the raw data will be published as well, but it is not ethical to allow unlimited download of the raw genomic sequencing data, as it is sensitive data. However, most researchers are using same pipelines (e.g. CellRanger) for raw data processing, and hence publishing the processed data (which is not sensitive) is the best way to support open science.
 
 One good option is to publish the raw data in European Genome Archive (EGA), where the data will be stored on European servers but won’t be available for free download without a separate permission from a named Data access committee (our group). This way you can avoid immediate data privacy concerns. Simultaneously, the processed data can be published e.g. in ArrayExpress, where it can be freely downloaded by other reseachers.
 
