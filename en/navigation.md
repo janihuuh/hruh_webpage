@@ -15,6 +15,7 @@
 
 * [scRNAseq basics](scRNAseq.md)
 * [scVI basics](scvi.md)
+* [scVI Atlas](scvi_atlas.md)
 * [Genotype demultiplexing](genotype_demultiplex.md)
 * [HTO demultiplexing](hto_demultiplexing.md)
 * [Mitochondrial variants](genotype_demultiplex.md)
