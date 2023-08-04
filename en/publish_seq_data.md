@@ -24,7 +24,7 @@ One good option is to publish the raw data in European Genome Archive (EGA), whe
     
     ```java -jar /csc/mustjoki2/hemap\_immunology/ega\_submission\_hemap/EGA-Cryptor-2.0.0/ega-cryptor-2.0.0.jar -i /path/to/your/files/ -o /path/to/your/new/folder/encrypted/```
 
-    * Input (-i) can be a parent directory containing all patient/sample folders, the encrypted files will have same directory structure
+        * Input (-i) can be a parent directory containing all patient/sample folders, the encrypted files will have same directory structure
     * Note! There are many fastq files for each sample (e.g. 4 fastq files gene expression and as many for V(DJ) expression), don’t get confused.
     
 3.	Create metadata files
@@ -70,8 +70,8 @@ One good option is to publish the raw data in European Genome Archive (EGA), whe
 |        |           |  |
 | ---------- |---------------------------------| ------------------------------|
 | Alias      | 0371f9d4-c63b-46… | Created by the submission system |
-| Title      | AA3\_0\_2015\_BM\_S32\_L001\_R | Should be same as in the samples -section |
-| Subject ID | encrypted/FHRB1641\_BM\_oct15\_TCR\_4/FHRB1641\_BM\_oct15\_TCR\_L001\_R\_fastq.gz | Should match the name of uploaded file |
+| Sample Alias      | AA3\_0\_2015\_BM\_S32\_L001\_R | Should be same as in the samples -section |
+| Filename | encrypted/FHRB1641\_BM\_oct15\_TCR\_4/FHRB1641\_BM\_oct15\_TCR\_L001\_R\_fastq.gz | Should match the name of uploaded file |
 
 
 An example of data access policy:
