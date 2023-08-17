@@ -32,10 +32,10 @@ One good option is to publish the raw data in European Genome Archive (EGA), whe
         ```cp --parents -R ./*/*.md5 ./md5```
     2.  Move the “md5” folder to your computer and use attached [R script](scrnaseq_ega_submission_metadata_3_and_5_.R), to create metadata table from the filenames
         * !!! Please do not edit the shared r script but make a copy of it to your computer which you can edit as much as you want!
-        * See How to atlas instructions fro moving files (scp -r command)
+        * See "How to atlas" instructions fro moving files (scp -r command)
         * 5'VDJ data -> use [scrnaseq_ega_submission_metadata_5_and_VDJ.R](scrnaseq_ega_submission_metadata_5_and_VDJ.R)
         * Files that you need to run the script:
-            * Sample template filled with your sample meta information (example: ega\_aa\_scrna\_samples.csv, template can also be found on ega webpage)
+            * Sample template filled with your sample meta information (template can be downloaded on ega submission page, under "Register samples" section)
          * (Optional: manuscript\_sample\_IDs.csv)
 3.	Upload all directories to EGA (this can take a couple of days if you have a lot of files)
     * Remember to remove identifiers from file names accordingly as original file names are visible for people downloading your data from EGA. 
