@@ -318,11 +318,12 @@ preprocessSeurat <- function(orig_object, cells.to.use){
   object  <- NormalizeData(object, normalization.method = "LogNormalize", scale.factor = 10000)
   object  <- FindVariableFeatures(object, selection.method = "vst", nfeatures = 2000, clip.max = 10)
 
-  ## Remove clonality genes
+  ## Remove clonality genes, ribosomal, lincRNAs etc.
   hvg     <- VariableFeatures(object)
   too_hvg <- HVFInfo(object = object) %>% add_rownames(var = "gene") %>% filter(variance.standardized > 10) %>% pull("gene") %>% as.character()
   hvg     <- hvg[!hvg %in% too_hvg]
   hvg     <- hvg[!hvg %in% clonality_genes]
+  hvg     <- hvg[!hvg %in% unwanted_genes]
 
   VariableFeatures(object) <- hvg
   # plotHVG(object, 30) #+ ylim(values = c(0,10))
@@ -353,12 +354,20 @@ getClonalityGenes <- function(object){
 
 }
 
+getUnwantedGenes <- function(object){
+  
+  unwanted_variation <- c(grep("^LINC", rownames(object), value = T), grep("^AC[[:digit:]]", rownames(object), value = T),
+                          grep("^AL[[:digit:]]", rownames(object), value = T),
+                          grep("^MT-", rownames(object), value = T), grep("^RP", rownames(object), value = T))
+  
+}
 
 
 ```
 
 ```R
 clonality_genes <- getClonalityGenes(bcl_seurat)
+unwanted_genes <- getUnwantedGenes(bcl_seurat)
 
 bcl_seurat <- bcl_seurat %>% preprocessSeurat(cells.to.use = colnames(bcl_seurat))
 ```
