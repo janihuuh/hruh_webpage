@@ -159,11 +159,10 @@ Perform this step on your personal computer.
 ```R
 library(Seurat)
 
+# This is the old object. Not the new one.
 obj <- readRDS("my_seurat_v4_object.rds")
 
-# Get the raw count data and the meta data. 
-# You must have the batch label included in the metadata as a column.
-
+# This came as a result from the analysis.
 cell_embeddings_scvi <- readRDS("seurat_v5_latents.rds")
 
 # Add the latents and UMAP as new slots to obj@reductions
@@ -182,7 +181,7 @@ obj <- RunUMAP(obj,dims = 1:30,reduction.name = "umap.scvi",reduction = "integra
 DimPlot(obj,reduction="umap.scvi",group.by="scvi_clusters")
 ```
 
-**Remeber that if you use a different integration method instead of scVI, it's best to use different names for integrated.scvi and umap.scvi**.
+**Remember that if you use a different integration method instead of scVI, it's best to use different names for integrated.scvi and umap.scvi**.
 **For example, if you use CCA, name them instead integrated.cca and umap.cca**.
 
 
