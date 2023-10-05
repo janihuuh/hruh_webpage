@@ -164,16 +164,18 @@ obj <- readRDS("my_seurat_v4_object.rds")
 
 # This came as a result from the analysis.
 cell_embeddings_scvi <- readRDS("seurat_v5_latents.rds")
+#cell_embeddings_umap <- readRDS("seurat_v5_umap.rds") # If you want the umap embeddings as well
 
 # Add the latents and UMAP as new slots to obj@reductions
-obj[["integrated.scvi"]] <- CreateDimReducObject(embeddings = cell_embeddings_scvi)
-obj[["umap.scvi"]] <- CreateDimReducObject(embeddings = cell_embeddings_umap)
+obj[["integrated.scvi"]] <- CreateDimReducObject(embeddings = cell_embeddings_scvi) # If you want the umap embeddings as well
+#obj[["umap.scvi"]] <- CreateDimReducObject(embeddings = cell_embeddings_umap)
 
 # Perform clustering for the latent embeddings
 # IMPORTANT: if you changed the number of dimensions in the integration step (R script), match these dimensions with them
 # For example, if you used ndims=20 in scVI, set dims = 1:20 for FindNeighbors and RunUMAP.
 obj <- FindNeighbors(obj, reduction = "integrated.scvi", dims = 1:30)
 obj <- FindClusters(obj, resolution = 0.5, cluster.name = "scvi_clusters")  
+# Create a new UMAP embedding (you can use the one created by Seurat v5 too and just skip this, but make sure the dims was set correctly)
 obj <- RunUMAP(obj,dims = 1:30,reduction.name = "umap.scvi",reduction = "integrated.scvi")
 
 
