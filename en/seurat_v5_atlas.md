@@ -39,7 +39,7 @@ obj <- readRDS("my_seurat_v5_object.rds")
 
 obj$batch <- obj$patient
 
-obj <- JoinLayers(so)
+obj <- JoinLayers(obj)
 
 raw_data <- obj[["RNA"]]$counts
 meta_data <- obj@meta.data
@@ -118,7 +118,7 @@ For example, make these edits if you use Harmony instead of scVI:
 - umap.scvi -> umap.harmony
 - scvi_clusters -> harmony_clusters
 
-As input, the script assumes an RData file (raw_data_and_meta_data.RData) with "raw_data" and "meta_data" objects.
+As input, the script assumes an RData file (*raw_data_and_meta_data.RData*) with "raw_data" and "meta_data" objects.
 Please see the beginning of this tutorial to learn how to extract them from a Seurat object.
 The script also saves the results.
 
@@ -165,15 +165,17 @@ obj <- readRDS("my_seurat_v4_object.rds")
 # You must have the batch label included in the metadata as a column.
 
 cell_embeddings_scvi <- readRDS("seurat_v5_latents.rds")
-cell_embeddings_umap <- readRDS("seurat_v5_umap.rds")
 
 # Add the latents and UMAP as new slots to obj@reductions
 obj[["integrated.scvi"]] <- CreateDimReducObject(embeddings = cell_embeddings_scvi)
 obj[["umap.scvi"]] <- CreateDimReducObject(embeddings = cell_embeddings_umap)
 
 # Perform clustering for the latent embeddings
+# IMPORTANT: if you changed the number of dimensions in the integration step (R script), match these dimensions with them
+# For example, if you used ndims=20 in scVI, set dims = 1:20 for FindNeighbors and RunUMAP.
 obj <- FindNeighbors(obj, reduction = "integrated.scvi", dims = 1:30)
 obj <- FindClusters(obj, resolution = 0.5, cluster.name = "scvi_clusters")  
+obj <- RunUMAP(obj,dims = 1:30,reduction.name = "umap.scvi",reduction = "integrated.scvi")
 
 
 # Visualize the new UMAP embedding
