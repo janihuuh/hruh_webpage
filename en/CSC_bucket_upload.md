@@ -10,9 +10,9 @@ screen -S <SOME_NAME_FOR_SCREEN>
 
 ## Install two Python packages (and conda environment if you don't have it yet)
 
-I have the bash profile in homes/<USERNAME>/.bash_profile
-I added PATH=$PATH:/csc/mustjoki/anaconda3/bin to the bash profile (nano homes/<USERNAME>/.bash_profile)
-source /homes/<USERNAME>/.bash_profile
+### You can also skip this part and use someone else's Conda environment (if it includes the packages)
+
+I have the bash profile in homes/<USERNAME>/.bash_profile and I added PATH=$PATH:/csc/mustjoki/anaconda3/bin to it. Remember to source it (source /homes/<USERNAME>/.bash_profile)
 
 ```bash
 /csc/mustjoki/anaconda3/bin/conda create --name <SOME_ENV_NAME> python=3.7
@@ -27,30 +27,31 @@ The default location for the new conda environment is (hidden) /homes/<USERNAME>
 This takes some time (maybe 5-10 min) and it might look like nothing is happening
 
 ```bash
+# Activate the environment
 source /csc/mustjoki/anaconda3/bin/activate <SOME_ENV_NAME>
-```
 
-Oscar suggested doing these but you might not need to (at least I got "Warning: 'bioconda' already in 'channels' list, moving to the top")
-conda config --add channels conda-forge
-conda config --add channels defaults
-conda config --add channels r
-conda config --add channels bioconda
 
-```bash
+##Oscar suggested doing these but you might not need to (at least I got "Warning: 'bioconda' already in 'channels' list, moving to the top")
+#conda config --add channels conda-forge
+#conda config --add channels defaults
+#conda config --add channels r
+#conda config --add channels bioconda
+
+# Install the needed Python packages
 pip install crypt4gh
 pip install s3cmd
 ```
 
 ## allas-cli-utils (to be able to use a-put, a-get etc.)
 
+```bash
 git clone https://github.com/CSCfi/allas-cli-utils
 cd  allas-cli-utils/
 export PATH=${PATH}:$(pwd)
+```
 
 Note: If you are in one of the fas2/NGS/... folders, you'll probably get "Permission denied". In that case, go to some of our own folders /csc/mustjoki/... until you reach the a-put step.
-Alternatively, you can skip git clone and just export my path:
-cd /csc/mustjoki/essi/allas-cli-utils
-export PATH=${PATH}:$(pwd)
+Alternatively, you can skip git clone and just export my path in /csc/mustjoki/essi/allas-cli-utils
 
 ## Connect to allas
 
