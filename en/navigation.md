@@ -38,6 +38,7 @@
 * [MAGeCK (CRISPR screen analysis)](mageck.md)
 * [CSC bucket download](csc_bucket.md)
 * [CSC bucket download - more options](csc_bucket_more_options.md)
+* [CSC bucket upload](CSC_bucket_upload.md)
 * [How to TCGA](TCGA_data.md)
 * [How to git](git.md)
 * [How to submit scRNAseq data to publish](publish_seq_data.md)
