@@ -65,7 +65,7 @@ Notice that the connection is open for 8 hours. I'm still not sure whether that 
 
 ## Use a-put to encrypt and transfer the file to Allas
 
-Francesca has <OUR_KEY>
+Francesca has OUR_KEY
 
 Go to your folder fas2/NGS/... and select a subfolder you want to transfer. It will be encrypted and compressed during the transfer. Think carefully what kinds of entities you want to transfer. Later you will retrieve one object (encrypted and compressed folder) at the time. The size should not be huge but on the other hand you don't want to have 1000 separate objects. I'd say objects of size 50-500 GB could be a good plan.
 
