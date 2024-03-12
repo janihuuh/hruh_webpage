@@ -1,6 +1,6 @@
 # Transfer of sensitive data to Allas
 
-Written in January 2024 by Essi
+Added by Essi in March 2024 
 
 ## Create new screen 
 
@@ -12,13 +12,13 @@ screen -S <SOME_NAME_FOR_SCREEN>
 
 **You can also skip this part and use someone else's Conda environment (if it includes the packages)**
 
-I have the bash profile in homes/<USERNAME>/.bash_profile and I added PATH=$PATH:/csc/mustjoki/anaconda3/bin to it. Remember to source it (source /homes/<USERNAME>/.bash_profile)
+I have the bash profile in `homes/<USERNAME>/.bash_profile` and I added `PATH=$PATH:/csc/mustjoki/anaconda3/bin` to it. Remember to source it (`source /homes/<USERNAME>/.bash_profile`)
 
 ```bash
 /csc/mustjoki/anaconda3/bin/conda create --name <SOME_ENV_NAME> python=3.7
 ```
 
-The default location for the new conda environment is (hidden) /homes/<USERNAME>/.conda. If you want to use a different location, do this: 
+The default location for the new conda environment is (hidden) `/homes/<USERNAME>/.conda`. If you want to use a different location, do this: 
 
 ```bash
 /csc/mustjoki/anaconda3/bin/conda create --prefix /csc/mustjoki/<YOUR_FOLDER>/<SOME_ENV_NAME> python=3.7
@@ -29,7 +29,6 @@ This takes some time (maybe 5-10 min) and it might look like nothing is happenin
 ```bash
 # Activate the environment
 source /csc/mustjoki/anaconda3/bin/activate <SOME_ENV_NAME>
-
 
 ##Oscar suggested doing these but you might not need to (at least I got "Warning: 'bioconda' already in 'channels' list, moving to the top")
 #conda config --add channels conda-forge
@@ -50,8 +49,7 @@ cd  allas-cli-utils/
 export PATH=${PATH}:$(pwd)
 ```
 
-Note: If you are in one of the fas2/NGS/... folders, you'll probably get "Permission denied". In that case, go to some of our own folders /csc/mustjoki/... until you reach the a-put step.
-Alternatively, you can skip git clone and just export my path /csc/mustjoki/essi/allas-cli-utils
+Note: If you are in one of the fas2/NGS/... folders, you'll probably get "Permission denied". In that case, go to some of our own folders /csc/mustjoki/... until you reach the a-put step. Alternatively, you can skip git clone and just export my path /csc/mustjoki/essi/allas-cli-utils
 
 ## Connect to allas
 
@@ -98,7 +96,7 @@ Does the size of the object look reasonable? It should be quite close to that of
 ## Get and decrypt the data
 
 ```bash
-a-get --sk ../<OUR_KEY>.sec Project_2007704_HRUH_pub/<NEW_ALLAS_FOLDER>/<FOLDER_NAME>.tar.c4gh
+a-get --sk <PATH_TO_KEY>/<OUR_KEY> Project_2007704_HRUH_pub/<NEW_ALLAS_FOLDER>/<FOLDER_NAME>.tar.c4gh
 ```
 
 Ask Francesca about the password
