@@ -79,7 +79,7 @@ a-put --tmpdir /homes/<USERNAME>/allas_tmp --encrypt c4gh --pk <OUR_KEY>.pub <FO
 
 Substitute `<NEW_ALLAS_FOLDER>` with some informative project name. (Really new only if you are doing this for the first time for the project. In case you already have a project folder you want to add to, you can check its name with rclone lsd allas:Project_2007704_HRUH_pub/)
 
-<FOLDER_NAME> is the informative subfolder name of the subfolder you are transferring. The end result will be `allas:Project_2007704_HRUH_pub/<NEW_ALLAS_FOLDER>/<FOLDER_NAME>.tar.c4gh`
+`<FOLDER_NAME>` is the informative subfolder name of the subfolder you are transferring. The end result will be `allas:Project_2007704_HRUH_pub/<NEW_ALLAS_FOLDER>/<FOLDER_NAME>.tar.c4gh`
 
 ## Check that the transfer happened
 
@@ -115,4 +115,4 @@ Ctrl a d to exit the screen, then:
 screen -X -S <SOME_NAME_FOR_SCREEN> kill
 ```
 
-´**Importantly: Describe the data and the subfolder structure in the Google sheet. The link was shared through Slack (or you can ask Essi or anyone who has done this before)**
+**Importantly: Describe the data and the subfolder structure in the Google sheet. The link was shared through Slack (or you can ask Essi or anyone who has done this before)**
